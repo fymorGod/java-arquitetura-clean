@@ -8,6 +8,7 @@ public class Aluno {
     private Cpf cpf;
     private String name;
     private Email email;
+    private String password;
     private List<Telefone> telefones = new ArrayList<>();
 
     public Aluno(Cpf cpf, String name, Email email) {
@@ -22,16 +23,16 @@ public class Aluno {
         this.telefones.add(new Telefone(ddd, numero));
     }
 
-    public Cpf getCpf() {
-        return cpf;
+    public String getCpf() {
+        return cpf.getNumeracao();
     }
 
     public String getName() {
         return name;
     }
 
-    public Email getEmail() {
-        return email;
+    public String getEmail() {
+        return email.getAddress();
     }
 
     public List<Telefone> getTelefones() {
