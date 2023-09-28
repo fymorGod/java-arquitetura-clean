@@ -5,8 +5,9 @@ public class Cpf {
     private String numeracao;
     public Cpf(String numeracao) {
 
-        if(numeracao == null || !numeracao.matches("\\\\d{3}\\\\.\\\\d{3}\\\\.\\\\d{3}\\\\-\\\\d{2}")){
-            throw new IllegalArgumentException("CPF Invalid");
+        if (numeracao == null ||
+                !numeracao.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
+            throw new IllegalArgumentException("CPF invalido!");
         }
         this.numeracao = numeracao;
     }
